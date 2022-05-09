@@ -1,0 +1,39 @@
+{
+  "vehiculos": [
+    {
+      "marca": "Renault",
+      "linea": "Renault Megane",
+      "color": "Negro",
+      "placa": "AAA-123",
+      "id": 1
+    },
+    {
+      "marca": "Chevrolet",
+      "linea": "Chevrolet Camaro",
+      "color": "Rojo",
+      "placa": "ABC-456",
+      "id": 2
+    },
+    {
+      "marca": "Toyota",
+      "linea": "Toyota Alphard",
+      "color": "Blanco",
+      "placa": "ABE-345",
+      "id": 3
+    },
+    {
+      "marca": "Jeep",
+      "linea": "Jeep Willys",
+      "color": "Azul",
+      "placa": "VVE-129",
+      "id": 4
+    },
+    {
+      "marca": "prueba",
+      "linea": "sssss",
+      "color": "xxcc",
+      "placa": "ABE-345",
+      "id": 5
+    }
+  ]
+}

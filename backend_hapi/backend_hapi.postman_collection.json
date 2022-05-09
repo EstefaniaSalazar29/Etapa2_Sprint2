@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "02ec3a00-f21f-4b04-b17e-8570fe0de1ed",
+		"name": "backend_hapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vehiculo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/vehiculo",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id_placa\": \"NUM-123\",\r\n\"id_linea\": \"2\",\r\n\"modelo\": \"2014\",\r\n\"fecha_vencimiento_seguro\": \"2023-01-30\",\r\n\"fecha_vencimiento_tecnomecanica\": \"2023-02-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/vehiculo",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id_linea\": \"1\", \r\n  \"modelo\": \"2010\", \r\n  \"fecha_vencimiento_seguro\": \"2023-03-24\", \r\n  \"fecha_vencimiento_tecnomecanica\": \"2024-05-30\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/vehiculo/id_placa?id_placa=dff-334",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"vehiculo",
+						"id_placa"
+					],
+					"query": [
+						{
+							"key": "id_placa",
+							"value": "dff-334"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/vehiculo?id_placa=CVY-000",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"vehiculo"
+					],
+					"query": [
+						{
+							"key": "id_placa",
+							"value": "CVY-000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modelo maximo y minimo almacenado de vehiculo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/vehiculo/modelo",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"vehiculo",
+						"modelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo rango fecha vencimiento seguro",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha1\": \"2023-02-31\",\r\n    \"fecha2\": \"2022-12-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/vehiculo/fecha_vencimiento_seguro/2011-03-09/2070-03-09",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"vehiculo",
+						"fecha_vencimiento_seguro",
+						"2011-03-09",
+						"2070-03-09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "marca",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/marca",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "marca",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {   \r\n        \"nombre\": \"Jeep\",\r\n        \"descripcion\": \"Es una marca de vehículos estadounidense, especializada en la producción de automóviles todoterreno\",\r\n        \"estado\": \"S\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/marca",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "marca",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Jeep\",\r\n   \"descripcion\": \"Es una marca de vehículos estadounidense, especializada en la producción de automóviles todoterreno\",\r\n   \"estado\": \"N\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/marca?id=3",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"marca"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "marca estado 'S'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/marca/s",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"marca",
+						"s"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "marca estado 'N'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/marca/n",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"marca",
+						"n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "linea",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/linea",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"linea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "linea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"id_marca\": \"3\",\r\n     \"nombre\": \"Jeep Willys\",\r\n     \"descripcion\": \"es un vehículo todoterreno de tracción en las cuatro ruedas\",\r\n     \"estado\": \"N\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/linea",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"linea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "linea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id_marca\": \"1\",\r\n        \"nombre\": \"Chevrolet Captiva\",\r\n        \"descripcion\": \"Color azul, transmision automatica, 128600 km\",\r\n        \"estado\": \"S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3030/linea?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"linea"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "linea estado 'N'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/linea/n",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"linea",
+						"n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "linea estado 'S'",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3030/linea/s",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"linea",
+						"s"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
